@@ -5,7 +5,7 @@ use strict;
 use Carp;
 use base qw(Exporter);
 
-our $VERSION = '0.0.1';
+our $VERSION = '0.0.2';
 
 our @EXPORT = qw(is_japanese_halfwidth);
 
@@ -27,22 +27,20 @@ __END__
 
 =head1 NAME
 
-Linqua::JA::Halfwidth - judge given single character is japanese halfwidth or not
+Lingua::JA::Halfwidth - judge given single character is japanese halfwidth or not
 
 =head1 SYNOPSIS
 
-  package YourPackage;
-  
   use strict;
-  use warning;
-  use Linqua::JA::Halfwidth;
+  use warnings;
+  use Lingua::JA::Halfwidth;
   use Encode qw(encode_utf8);
   use utf8;
   
   my $string = qw/aあｴ９波ｦ/;
   for (split //, $string) {
       print encode_utf8($_), ": ";
-      print is_japanese_halfwidth($_);
+      print is_japanese_halfwidth($_), "\n";
   }
     
   # a: 0
@@ -60,10 +58,10 @@ Target character is japanese halfwidth katakana and punctuation and voice marks 
 (See also t/01.is_japanese_halfwidth.t)
 
 Unicode block is very useful. 
-So, when judge Japanese halfwidth katakana and character used japanese halfwidth, we want to use \p{InHalfwidthAndFullwidthForms}.
+When judge japanese halfwidth katakana and character used japanese halfwidth, we want to use \p{InHalfwidthAndFullwidthForms}.
 But, this unicode block contain fullwidth number and so on...
 
-Therefore, I make this module. :-)
+So, I make this module. :-)
 
 =head1 METHODS
 
