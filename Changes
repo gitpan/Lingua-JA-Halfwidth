@@ -4,5 +4,8 @@ Revision history for Lingua-JA-Halfwidth
        Initial release.
 
 0.0.2  Mon Jul 21 08:56:17 2009
-       modify NAME and SYNOPSIS.
+       modify pod ( SYNOPSIS and so on )
+
+0.0.3  Mon Jul 21 15:02:04 2009
+       add Test::Perl::Critic in Makefile.PL
 
