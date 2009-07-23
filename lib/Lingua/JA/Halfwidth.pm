@@ -5,7 +5,7 @@ use strict;
 use Carp;
 use base qw(Exporter);
 
-our $VERSION = '0.0.3';
+our $VERSION = '0.0.4';
 
 our @EXPORT = qw(is_japanese_halfwidth);
 
@@ -37,7 +37,7 @@ Lingua::JA::Halfwidth - judge given single character is japanese halfwidth or no
   use Encode qw(encode_utf8);
   use utf8;
   
-  my $string = qw/aあｴ９波ｦ/;
+  my $string = qw/aあｳ９波ｦ/;
   for (split //, $string) {
       print encode_utf8($_), ": ";
       print is_japanese_halfwidth($_), "\n";
@@ -45,7 +45,7 @@ Lingua::JA::Halfwidth - judge given single character is japanese halfwidth or no
     
   # a: 0
   # あ: 0
-  # ｴ: 1
+  # ｳ: 1
   # ９: 0
   # 波: 0
   # ｦ: 1
@@ -54,7 +54,7 @@ Lingua::JA::Halfwidth - judge given single character is japanese halfwidth or no
 
 This module is aimed to check easily whether given single character is japanese halfwidth or not.
 
-Target character are japanese halfwidth katakana, punctuation, voice marks and bracket.
+Target characters are japanese halfwidth katakana, punctuation, voice marks and bracket.
 (See also t/01.is_japanese_halfwidth.t)
 
 Unicode block is very useful. 
