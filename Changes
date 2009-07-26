@@ -16,3 +16,6 @@ Revision history for Lingua-JA-Halfwidth
        Module::Install 0.91 => 0.87
        Because auto_install() can't run.
 
+0.0.6  Mon Jul 26 13:28:19 2009
+       remove Build.PL from MANIFEST
+

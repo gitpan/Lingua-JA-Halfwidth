@@ -5,7 +5,7 @@ use strict;
 use Carp;
 use base qw(Exporter);
 
-our $VERSION = '0.0.5';
+our $VERSION = '0.0.6';
 
 our @EXPORT = qw(is_japanese_halfwidth);
 
