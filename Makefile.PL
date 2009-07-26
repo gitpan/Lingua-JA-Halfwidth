@@ -1,13 +1,14 @@
-#use strict;
-use inc::Module::Install;
+use strict;
+use inc::Module::Install 0.87;
 
-name     'Lingua-JA-Halfwidth';
+perl_version '5.008';
+
+name 'Lingua-JA-Halfwidth';
 all_from 'lib/Lingua/JA/Halfwidth.pm';
 
-auto_include_deps;
-auto_install;
+test_requires 'Test::Perl::Critic';
 use_test_base;
 
-test_requires 'Test::Perl::Critic';
+auto_install;
 
 WriteAll;

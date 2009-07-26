@@ -10,5 +10,9 @@ Revision history for Lingua-JA-Halfwidth
        add Test::Perl::Critic in Makefile.PL
 
 0.0.4  Mon Jul 23 23:28:29 2009
-       add auto_install in Makefile.PL
+       add auto_install() in Makefile.PL
+
+0.0.5  Mon Jul 26 09:37:14 2009
+       Module::Install 0.91 => 0.87
+       Because auto_install() can't run.
 
